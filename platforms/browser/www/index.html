@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prueba</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/jquerym/jquery.mobile-1.4.5.js"></script>
+    <link rel="stylesheet" href="css/nuntius.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css">
+    <script src="js/funciones.js"></script>
+  </head>
+  <body>
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+      <div id="cuerpo">
+      <div id="principal"> 
+        <form>
+            <h1>Canem</h1>
+            <table width="100%" height="100%">
+                <tr>
+                    <td width="15%">&nbsp;</td>
+                    <td width="70%" align="center" valign="middle">
+                        <div class="group">
+                            <input type="text" required="required"/><span class="highlight"></span><span class="bar"></span>
+                            <label>Nombre</label>
+                        </div>
+                        <div class="group">
+                            <input type="password" required="required"/><span class="highlight"></span><span class="bar"></span>
+                            <label>Contraseña</label>
+                        </div>
+                    </td>
+                    <td width="15%">&nbsp;</td>
+                </tr>  
+            </table>
+            <div class="btn-box">
+                <button class="btn btn-submit" type="submit">Ingresar</button><br><br>
+                <button class="btn btn-cancel" type="button" onclick="activarCapa('registro');">Registro</button>
+            </div>
+        </form>
+      </div> <!-- principal -->
+      <div id="registro"  style="visibility: hidden;">
+          <form id="frmRegistroPaseador">
+              <h1>Canem</h1>
+              <h5>Registro</h5>
+              <table width="100%" height="100%">
+                <tr>
+                    <td width="15%">&nbsp;</td>
+                    <td width="70%" align="center" valign="middle">
+                        <div class="group">
+                            <input type="text" required="required" id="correoPaseador" name="correoPaseador"/><span class="highlight"></span><span class="bar"></span>
+                            <label>Correo</label>
+                        </div>
+                        <div class="group">
+                            <input type="text" required="required" id="nombrePaseador" name="nombrePaseador"/><span class="highlight"></span><span class="bar"></span>
+                            <label>Nombre</label>
+                        </div>
+                        <div class="group">
+                            <input type="text" required="required" id="apellidopPaseador" name="apellidopPaseador"/><span class="highlight"></span><span class="bar"></span>
+                            <label>Apellido Paterno</label>
+                        </div>
+                        <div class="group">
+                            <input type="text" required="required" id="apellidomPaseador" name="apellidomPaseador"/><span class="highlight"></span><span class="bar"></span>
+                            <label>Apellido Materno</label>
+                        </div>
+                        <div class="group">
+                            <input type="text" required="required" id="telefonoPaseador" name="telefonoPaseador"/><span class="highlight"></span><span class="bar"></span>
+                            <label>Teléfono</label>
+                        </div>
+                        <div class="group">
+                            <input type="text" required="required" id="ciudadPaseador" name="ciudadPaseador" onkeyup="ciudadSugerencia()"/><span class="highlight"></span><span class="bar"></span>
+                            <input type="hidden" id="claveCiudadPaseador" name="claveCiudadPaseador">
+                            <div id="suggesstion-box"></div>
+                            <label>Ciudad</label>
+                        </div>
+                        <div class="group">
+                            <input type="password" required="required" id="contrasenaPaseador" name="contrasenaPaseador"/><span class="highlight"></span><span class="bar"></span>
+                            <label>Contraseña</label>
+                        </div>
+                        <div class="group">
+                            <input type="password" required="required" id="confirmacionPaseador" name="confirmacionPaseador"/><span class="highlight"></span><span class="bar"></span>
+                            <label>Confirmar contraseña</label>
+                        </div>
+                        <div class="btn-box">
+                            <button class="btn btn-submit" type="button" onclick="validarRegistroPaseador();">Registrar</button><br><br>
+                        </div>
+                    </td>
+                    <td width="15%">&nbsp;</td>
+                </tr>  
+            </table>
+          </form>
+      </div> <!-- registro -->
+      <div id="mapa" style="visibility: hidden;"></div> <!-- mapa -->
+      </div> <!-- cuerpo -->
+      <script type="text/javascript">
+        app.initialize();
+    </script>
+  </body>
+</html> 
